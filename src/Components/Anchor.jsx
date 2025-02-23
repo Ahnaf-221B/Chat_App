@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
+import {Link} from "react-router-dom";
 
 
 /**
  * @typedef {import ('react').AnchorHTMLAttributes<HTMLAnchorElement>} AchorHTMLProps
  * @typedef {AchorHTMLProps} AnchorProps
- */
+ */ 
 
 /**
  * Anchor component
@@ -21,13 +22,14 @@ export function Anchor({className, children, ...props})
   const classes = twMerge(clsx(baseStyles), className);
 
   return (
-    <a className={classes} {...props}>
+    <Link className={classes} {...props} to={props.href}> 
         {children}
-    </a>
+    </Link>
   )
 }
 
 Anchor.propTypes = {
 	className: PropTypes.string,
-    children: PropTypes.node
+    children: PropTypes.node,
+    href: PropTypes.string.isRequired
 };

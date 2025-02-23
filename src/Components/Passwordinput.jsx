@@ -6,7 +6,7 @@ import { IconEye, IconEyeOff } from "@tabler/icons-react";
 
 /**
  * @typedef {import('react').InputHTMLAttributes<HTMLInputElement>} InputHTMLProps
- * @typedef {InputHTMLProps &{
+ * @typedef InputHTMLProps &{
  * label?: string,
  * error?:string,
  * icon?: import('react').ReactNode,
